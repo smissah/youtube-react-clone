@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: none;
+  padding: none;
+  text-decoration: none;
+}
+
+:root {
+  --clr-background: rgb(247, 247, 247);
+}
+
+body {
+  background: var(--clr-background);
+  font-size: 65.5%;
+  display: grid;
+  place-items: center;
+  padding: 0 auto;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  height: 100vh;
+  width: 80vw;
+}
+
+.main {
+  background: #8080c2;
+  color: red;
+  padding: 1rem;
+}
+/*# sourceMappingURL=Main.css.map */

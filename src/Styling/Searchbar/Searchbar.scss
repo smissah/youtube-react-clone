@@ -1,0 +1,16 @@
+@import "../styleGuide";
+.searchbar {
+  color: pink;
+
+  margin-bottom: $marginSmall;
+  flex: 0.8;
+  .searchbar__box {
+    width: 100%;
+    height: 1.5rem;
+
+    input {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

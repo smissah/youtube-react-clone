@@ -1,0 +1,18 @@
+@import "../styleGuide";
+.app {
+  background: rgb(219, 211, 211);
+  display: flex;
+  height: 100%;
+  flex-direction: row; //change to column for mobile
+
+  .app__left {
+    flex: 0.7;
+    margin: $marginNormal $marginSmall;
+  }
+
+  .app__right {
+    flex: 0.3;
+    margin: $marginNormal $marginSmall;
+    height: 100%;
+  }
+}
