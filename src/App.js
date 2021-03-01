@@ -5,13 +5,17 @@ import { Searchbar, Aside, Main } from "./Components";
 import "./Styling/App/App.css";
 class App extends Component {
   state = {};
+
+  handleSubmit = (e) => {
+    console.log("submitted" + e);
+  };
   render() {
     return (
       <div className="container">
         <div className="app ">
           <div className="app__left">
             {/* //searchbar */}
-            <Searchbar />
+            <Searchbar onFormSubmit={this.handleSubmit} />
             {/* //mainvideo */}
             <Main />
           </div>
