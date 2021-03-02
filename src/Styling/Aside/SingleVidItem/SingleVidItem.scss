@@ -1,0 +1,38 @@
+@import "../../styleGuide";
+
+.videoItem {
+  @include frost;
+  //   background: red;
+  border-radius: $radSmall;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $paddingSmall;
+  transition: all $aniSpeed;
+  margin-bottom: $marginNormal;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+    background: rgba(255, 255, 255, 0.302);
+    box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.391);
+  }
+
+  img {
+    border-radius: $radSmall;
+    margin-right: $marginSmall;
+  }
+
+  .videoItem__thumbnail {
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .videoItem__text {
+    background: none;
+  }
+}
+
+.videoItem:last-child {
+  margin-bottom: 0;
+}

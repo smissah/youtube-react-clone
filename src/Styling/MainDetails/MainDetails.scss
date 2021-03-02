@@ -1,0 +1,24 @@
+@import "../styleGuide";
+
+.main__details {
+  @include frost;
+  border-radius: $radNormal;
+  height: fit-content;
+  padding: $paddingNormal;
+  margin: $marginNormal $marginSmall;
+  width: fit-content;
+
+  .main__detailsText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .main__detailsChannel {
+      margin-right: $paddinglarge;
+    }
+
+    .main__detailsTitle {
+      //   background: none;
+    }
+  }
+}
