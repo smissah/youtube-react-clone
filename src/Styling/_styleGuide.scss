@@ -82,24 +82,20 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  display: none;
   width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  display: none;
   background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  display: none;
   background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  display: none;
   background: #555;
 }
