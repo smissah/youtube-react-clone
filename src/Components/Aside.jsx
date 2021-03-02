@@ -5,9 +5,11 @@ const Aside = ({ videos, handleVideoSelect }) => {
   console.log(videos);
   return (
     <div className="aside">
-      {!videos
-        ? ""
-        : videos.map((video, index) => {
+      {!videos ? (
+        ""
+      ) : (
+        <div className="aside__list">
+          {videos.map((video, index) => {
             const {
               snippet: {
                 channelTitle,
@@ -32,6 +34,8 @@ const Aside = ({ videos, handleVideoSelect }) => {
               />
             );
           })}
+        </div>
+      )}
     </div>
   );
 };

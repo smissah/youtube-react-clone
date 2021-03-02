@@ -72,28 +72,32 @@ body {
   background: #555;
 }
 
-.app {
-  background-image: url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+.videoToolbar {
+  background: rgba(255, 255, 255, 0.254);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.24);
   border-radius: 25px;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: row;
-  object-fit: contain;
-  padding: 0.5rem 1rem;
-  transition: background 0.35s ease-in-out;
-}
-
-.app .app__left {
-  flex: 0.7;
+  height: fit-content;
+  padding: 1rem;
   margin: 1rem 0.5rem;
-}
-
-.app .app__right {
+  width: fit-content;
   flex: 0.3;
-  margin: 1rem 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
 }
-/*# sourceMappingURL=App.css.map */
+
+.videoToolbar .videoToolbar__icon {
+  font-size: 2.6rem;
+  color: var(--clr-black);
+  border-radius: 25px;
+  padding: 0.5rem;
+  transition: font-size 0.35s ease-in-out;
+  background: rgba(255, 255, 255, 0.254);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.24);
+}
+
+.videoToolbar .videoToolbar__icon:hover {
+  transform: scale(1.03);
+}
+/*# sourceMappingURL=VideoToolbar.css.map */

@@ -11,6 +11,10 @@
   height: fit-content !important;
   border-radius: $radNormal;
 
+  .main__underVideo {
+    display: flex;
+    justify-content: space-between;
+  }
   iframe {
     object-fit: contain;
     border-radius: $radSmall;

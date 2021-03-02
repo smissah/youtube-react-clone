@@ -3,10 +3,16 @@
 .aside {
   @include frost;
   // background: pink;
+  overflow: auto;
   height: 100%;
+  height: fit-content;
   border-radius: $radNormal;
   padding: $paddingNormal;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .aside__list {
+    overflow-y: scroll;
+  }
 }
