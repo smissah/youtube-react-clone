@@ -2,7 +2,7 @@ import React from "react";
 import { MainDetails } from "../Components";
 import "../Styling/Main/Main.css";
 
-const Main = ({ videos, video }) => {
+const Main = ({ video }) => {
   // console.log(video);
 
   if (video) {
@@ -20,8 +20,8 @@ const Main = ({ videos, video }) => {
             title="Video Player"
           />
         )}
+        <MainDetails video={video} />
       </div>
-      <MainDetails />
     </React.Fragment>
   );
 };

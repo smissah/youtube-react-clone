@@ -24,9 +24,23 @@ body {
 }
 
 .container {
-  background: white;
   height: 100vh;
+  min-height: 400px;
+  padding: 1rem 0;
   width: 90vw;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    display: flex;
+    flex: 1;
+    height: fit-content;
+    flex-direction: column !important;
+  }
+  .app .app__left,
+  .app .app__right {
+    flex: 1;
+  }
 }
 
 .app {
@@ -36,10 +50,11 @@ body {
   background-repeat: no-repeat;
   border-radius: 25px;
   display: flex;
-  height: 100%;
+  height: fit-content;
   flex-direction: row;
   object-fit: contain;
   padding: 0.5rem 1rem;
+  transition: background 0.35s ease-in-out;
 }
 
 .app .app__left {

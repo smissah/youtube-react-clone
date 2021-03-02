@@ -4,7 +4,7 @@
 
   height: fit-content;
   // background: red;
-  margin-bottom: $marginSmall;
+  margin-bottom: $marginNormal;
   flex: 0.8;
   .searchbar__box {
     position: relative;
@@ -33,6 +33,12 @@
       padding: $paddingSmall;
       padding-left: 2.5rem;
       width: 100%;
+      transition: background $aniSpeed;
+
+      &:focus {
+        background: rgba(255, 255, 255, 0.562);
+        color: var(--clr-black);
+      }
     }
   }
 }

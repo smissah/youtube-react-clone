@@ -1,6 +1,12 @@
 @import "../styleGuide";
 
 .aside {
-  background: pink;
-  color: green;
+  @include frost;
+  // background: pink;
+  height: 100%;
+  border-radius: $radNormal;
+  padding: $paddingNormal;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

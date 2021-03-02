@@ -23,6 +23,10 @@ class App extends React.Component {
       selectedVideo: res.data.items[0],
     });
   };
+
+  handleVideoSelect = () => {
+    console.log("selecting video");
+  };
   render() {
     const { videos, selectedVideo } = this.state;
     return (
@@ -36,7 +40,7 @@ class App extends React.Component {
           </div>
           <div className="app__right">
             {/* aside-video results */}
-            <Aside />
+            <Aside videos={videos} handleVideoSelect={this.handleVideoSelect} />
           </div>
         </div>
       </div>

@@ -4,16 +4,20 @@
   @include frost;
   padding: $paddingNormal;
   display: grid;
-  place-items: center;
+  // place-items: center;
   min-height: 500px;
+  height: 100%;
+  position: relative;
+  height: fit-content !important;
   border-radius: $radNormal;
 
   iframe {
+    object-fit: contain;
     border-radius: $radSmall;
-
     border: none;
     width: 100%;
     height: 100%;
+    min-height: 500px;
   }
 }
 

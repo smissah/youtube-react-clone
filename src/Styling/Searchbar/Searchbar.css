@@ -24,15 +24,29 @@ body {
 }
 
 .container {
-  background: white;
   height: 100vh;
+  min-height: 400px;
+  padding: 1rem 0;
   width: 90vw;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    display: flex;
+    flex: 1;
+    height: fit-content;
+    flex-direction: column !important;
+  }
+  .app .app__left,
+  .app .app__right {
+    flex: 1;
+  }
 }
 
 .searchbar {
   color: var(--clr-white);
   height: fit-content;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   flex: 0.8;
 }
 
@@ -65,5 +79,11 @@ body {
   padding: 0.5rem;
   padding-left: 2.5rem;
   width: 100%;
+  transition: background 0.35s ease-in-out;
+}
+
+.searchbar .searchbar__box input:focus {
+  background: rgba(255, 255, 255, 0.562);
+  color: var(--clr-black);
 }
 /*# sourceMappingURL=Searchbar.css.map */
