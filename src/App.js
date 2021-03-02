@@ -10,18 +10,22 @@ class App extends React.Component {
 
   handleSubmit = async (termFromSearchbar) => {
     // alert(termFromSearchbar);
-    const res = await youtube.get("/search", {
-      params: {
-        part: "snippet",
-        maxResults: 5,
-        key: process.env.REACT_APP_API_KEY,
-        q: termFromSearchbar,
-      },
-    });
-    this.setState({
-      videos: res.data.items,
-      selectedVideo: res.data.items[0],
-    });
+    try {
+      const res = await youtube.get("/search", {
+        params: {
+          part: "snippet",
+          maxResults: 5,
+          key: process.env.REACT_APP_API_KEY,
+          q: termFromSearchbar,
+        },
+      });
+      this.setState({
+        videos: res.data.items,
+        selectedVideo: res.data.items[0],
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   handleVideoSelect = (clickedVideo) => {
