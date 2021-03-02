@@ -24,6 +24,8 @@ body {
 }
 
 .container {
+  display: grid;
+  place-items: center;
   height: 100vh;
   min-height: 400px;
   padding: 1rem 0;
@@ -50,7 +52,6 @@ body {
   border-radius: 12.5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding: 0.5rem;
   transition: all 0.35s ease-in-out;
   margin-bottom: 1rem;
@@ -73,8 +74,9 @@ body {
   object-fit: contain;
 }
 
-.videoItem .videoItem__text {
+.videoItem .videoItem__text h3 {
   background: none;
+  text-align: left;
 }
 
 .videoItem:last-child {

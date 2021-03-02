@@ -6,7 +6,7 @@
   border-radius: $radSmall;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: $paddingSmall;
   transition: all $aniSpeed;
   margin-bottom: $marginNormal;
@@ -29,7 +29,10 @@
   }
 
   .videoItem__text {
-    background: none;
+    h3 {
+      background: none;
+      text-align: left;
+    }
   }
 }
 

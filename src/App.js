@@ -24,10 +24,10 @@ class App extends React.Component {
     });
   };
 
-  handleVideoSelect = (clickedVideoId) => {
-    const {
-      id: { videoId },
-    } = this.state.videos;
+  handleVideoSelect = (clickedVideo) => {
+    this.setState({
+      selectedVideo: clickedVideo,
+    });
   };
   render() {
     const { videos, selectedVideo } = this.state;

@@ -11,6 +11,7 @@ const Aside = ({ videos, handleVideoSelect }) => {
             const {
               snippet: {
                 channelTitle,
+                description,
                 thumbnails: {
                   default: { url },
                 },
@@ -23,8 +24,10 @@ const Aside = ({ videos, handleVideoSelect }) => {
                 key={index}
                 channelTitle={channelTitle}
                 title={title}
+                video={video}
                 videoId={videoId}
                 thumbnail={url}
+                description={description}
                 handleVideoSelect={handleVideoSelect}
               />
             );
