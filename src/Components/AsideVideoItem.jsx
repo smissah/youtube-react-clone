@@ -9,7 +9,7 @@ const AsideVideoItem = ({
 }) => {
   //   console.log(handleVideoSelect);
   return (
-    <div className="videoItem" onClick={() => handleVideoSelect()}>
+    <div className="videoItem" onClick={() => handleVideoSelect(videoId)}>
       <img src={thumbnail} alt="" className="videoItem__thumbnail" />
 
       <div className="videoItem__text">

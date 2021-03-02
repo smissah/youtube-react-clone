@@ -24,8 +24,10 @@ class App extends React.Component {
     });
   };
 
-  handleVideoSelect = () => {
-    console.log("selecting video");
+  handleVideoSelect = (clickedVideoId) => {
+    const {
+      id: { videoId },
+    } = this.state.videos;
   };
   render() {
     const { videos, selectedVideo } = this.state;
