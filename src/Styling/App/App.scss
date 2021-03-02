@@ -1,9 +1,16 @@
 @import "../styleGuide";
 .app {
-  background: rgb(219, 211, 211);
+  // background-image: url("https://images.unsplash.com/photo-1495476479092-6ece1898a101?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80");
+  background-image: url("https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: $radNormal;
   display: flex;
   height: 100%;
   flex-direction: row; //change to column for mobile
+  object-fit: contain;
+  padding: $paddingSmall $paddingNormal;
 
   .app__left {
     flex: 0.7;

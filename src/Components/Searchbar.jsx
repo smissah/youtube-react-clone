@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Styling/Searchbar/Searchbar.css";
+import { AiOutlineSearch } from "react-icons/ai";
 
 class Searchbar extends Component {
   state = {
@@ -12,9 +13,10 @@ class Searchbar extends Component {
     });
 
   handleSubmit = (e) => {
-    e.preventDefault();
     const { searchTerm } = this.state;
     const { onFormSubmit } = this.props;
+    e.preventDefault();
+
     onFormSubmit(searchTerm);
   };
 
@@ -22,7 +24,8 @@ class Searchbar extends Component {
     return (
       <div className="searchbar">
         <div className="searchbar__box">
-          <form action="">
+          <AiOutlineSearch className="searchbar__icon" />
+          <form action="" onSubmit={this.handleSubmit}>
             <input
               type="text"
               placeholder="Search..."

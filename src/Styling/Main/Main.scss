@@ -1,8 +1,24 @@
 @import "../styleGuide";
 
 .main {
-  background: rgb(128, 128, 194);
-  color: red;
-
+  @include frost;
   padding: $paddingNormal;
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+  border-radius: $radNormal;
+
+  iframe {
+    border-radius: $radSmall;
+
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.loading {
+  font-size: 1.4rem;
+  color: white;
+  // transform: translateY(100%);
 }

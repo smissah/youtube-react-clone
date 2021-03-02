@@ -1,15 +1,30 @@
-import react, { Component } from "react";
+import React from "react";
 import youtube from "./api/youtube";
 import { Searchbar, Aside, Main } from "./Components";
-
 import "./Styling/App/App.css";
-class App extends Component {
-  state = {};
+class App extends React.Component {
+  state = {
+    videos: [],
+    selectedVideo: null,
+  };
 
-  handleSubmit = (e) => {
-    console.log("submitted" + e);
+  handleSubmit = async (termFromSearchbar) => {
+    // alert(termFromSearchbar);
+    const res = await youtube.get("/search", {
+      params: {
+        part: "snippet",
+        maxResults: 5,
+        key: process.env.REACT_APP_API_KEY,
+        q: termFromSearchbar,
+      },
+    });
+    this.setState({
+      videos: res.data.items,
+      selectedVideo: res.data.items[0],
+    });
   };
   render() {
+    const { videos, selectedVideo } = this.state;
     return (
       <div className="container">
         <div className="app ">
@@ -17,7 +32,7 @@ class App extends Component {
             {/* //searchbar */}
             <Searchbar onFormSubmit={this.handleSubmit} />
             {/* //mainvideo */}
-            <Main />
+            <Main video={selectedVideo} videos={videos} />
           </div>
           <div className="app__right">
             {/* aside-video results */}
