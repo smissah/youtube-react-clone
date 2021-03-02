@@ -1,5 +1,5 @@
 import React from "react";
-import { MainDetails } from "../Components";
+import { MainDetails, VideoToolbar } from "../Components";
 import "../Styling/Main/Main.css";
 
 const Main = ({ video }) => {
@@ -20,7 +20,9 @@ const Main = ({ video }) => {
             title="Video Player"
           />
         )}
-        <MainDetails video={video} />
+        <div className="main__underVideo">
+          <MainDetails video={video} /> {video && <VideoToolbar />}
+        </div>
       </div>
     </React.Fragment>
   );

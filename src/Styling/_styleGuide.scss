@@ -51,10 +51,8 @@ body {
 .container {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
   min-height: 400px;
-
-  padding: $paddingNormal 0;
 
   width: 90vw;
 }
@@ -72,5 +70,10 @@ body {
       flex: 1;
       // background: blue;
     }
+  }
+
+  .searchbar {
+    position: sticky;
+    top: 10px;
   }
 }

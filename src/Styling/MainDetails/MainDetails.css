@@ -26,9 +26,8 @@ body {
 .container {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
   min-height: 400px;
-  padding: 1rem 0;
   width: 90vw;
 }
 
@@ -42,6 +41,10 @@ body {
   .app .app__left,
   .app .app__right {
     flex: 1;
+  }
+  .searchbar {
+    position: sticky;
+    top: 10px;
   }
 }
 

@@ -4,3 +4,4 @@ export { default as Aside } from "./Aside";
 export { default as MainDetails } from "./MainDetails";
 
 export { default as AsideVideoItem } from "./AsideVideoItem";
+export { default as VideoToolbar } from "./VideoToolbar";

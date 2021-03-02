@@ -2,7 +2,7 @@
 
 .videoItem {
   @include frost;
-  //   background: red;
+  align-items: center;
   border-radius: $radSmall;
   display: flex;
   flex-direction: row;
