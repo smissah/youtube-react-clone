@@ -29,6 +29,7 @@ class App extends React.Component {
       selectedVideo: clickedVideo,
     });
   };
+
   render() {
     const { videos, selectedVideo } = this.state;
     return (
