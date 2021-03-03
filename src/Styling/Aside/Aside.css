@@ -45,6 +45,7 @@ body {
     top: 10px;
   }
 }
+
 .aside {
   background: rgba(255, 255, 255, 0.254);
   backdrop-filter: blur(5px);
@@ -52,6 +53,7 @@ body {
   overflow: auto;
   height: 100%;
   height: fit-content;
+  min-height: 900px;
   border-radius: 25px;
   padding: 1rem;
   display: flex;
