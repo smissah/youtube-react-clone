@@ -60,11 +60,11 @@ body {
 
 .main__details .main__detailsText {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .main__details .main__detailsText .main__detailsChannel {
-  margin-right: 1.5rem;
+  margin-right: 4rem;
 }
 /*# sourceMappingURL=MainDetails.css.map */

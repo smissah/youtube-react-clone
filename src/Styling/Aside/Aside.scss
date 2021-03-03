@@ -6,7 +6,7 @@
   overflow: auto;
   height: 100%;
   height: fit-content;
-  min-height: 900px;
+  max-height: 800px;
   border-radius: $radNormal;
   padding: $paddingNormal;
   display: flex;
@@ -15,5 +15,8 @@
 
   .aside__list {
     overflow-y: scroll;
+    overflow-x: hidden;
   }
+
+  @include scrollbar;
 }

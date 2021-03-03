@@ -53,15 +53,41 @@ body {
   overflow: auto;
   height: 100%;
   height: fit-content;
-  min-height: 900px;
+  max-height: 800px;
   border-radius: 25px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 
 .aside .aside__list {
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.aside ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.aside ::-webkit-scrollbar-track {
+  background: #d1d1d164;
+  border-radius: 10px;
+}
+
+.aside ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.254);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.24);
+  border-radius: 10px;
+  transition: all 0.35s ease-in-out;
+}
+
+.aside ::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 107, 100, 0.507);
 }
 /*# sourceMappingURL=Aside.css.map */

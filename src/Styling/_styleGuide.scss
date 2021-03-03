@@ -30,6 +30,9 @@ $paddinglarge: 1.5rem;
 $radNormal: 25px;
 $radSmall: 12.5px;
 
+// /animation speed
+$aniSpeed: 0.35s ease-in-out;
+
 //blur /frost
 @mixin frost {
   background: rgba(255, 255, 255, 0.254);
@@ -37,8 +40,31 @@ $radSmall: 12.5px;
   box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.24);
 }
 
-// /animation speed
-$aniSpeed: 0.35s ease-in-out;
+@mixin scrollbar {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d1d1d164;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @include frost;
+    border-radius: 10px;
+    transition: all $aniSpeed;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 107, 100, 0.507);
+  }
+}
+
 //!-----------------
 body {
   background: var(--clr-background);

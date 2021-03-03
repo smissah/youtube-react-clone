@@ -11,11 +11,11 @@
 
   .main__detailsText {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
     .main__detailsChannel {
-      margin-right: $paddinglarge;
+      margin-right: 4rem;
     }
 
     .main__detailsTitle {
