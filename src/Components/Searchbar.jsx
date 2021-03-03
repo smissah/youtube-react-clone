@@ -7,11 +7,12 @@ class Searchbar extends Component {
     searchTerm: "",
   };
 
-  handleChange = (e) =>
-    this.setState({
+  handleChange = (e) => {
+    console.log(this.state.searchTerm);
+    return this.setState({
       searchTerm: e.target.value,
     });
-
+  };
   handleSubmit = (e) => {
     const { searchTerm } = this.state;
     const { onFormSubmit } = this.props;

@@ -12,9 +12,6 @@ class App extends React.Component {
     // alert(termFromSearchbar);
     const res = await youtube.get("/search", {
       params: {
-        part: "snippet",
-        maxResults: 5,
-        key: process.env.REACT_APP_API_KEY,
         q: termFromSearchbar,
       },
     });
