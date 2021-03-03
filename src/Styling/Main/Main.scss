@@ -13,7 +13,13 @@
 
   .main__underVideo {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    .main__underVideoTitleAndToolbar {
+      display: flex;
+      flex-direction: row;
+    }
   }
   iframe {
     object-fit: contain;

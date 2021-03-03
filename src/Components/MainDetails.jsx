@@ -14,7 +14,7 @@ const MainDetails = ({ video }) => {
       <div className="main__details">
         <h2 className="main__detailsText">
           <div className="main__detailsChannel">
-            {channelTitle} {""}
+            {channelTitle[0].toUpperCase()}
           </div>
           <div className="main__detailsTitle">{title}</div>
         </h2>

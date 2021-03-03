@@ -6,6 +6,7 @@ class App extends React.Component {
   state = {
     videos: [],
     selectedVideo: null,
+    description: true,
   };
 
   handleSubmit = async (termFromSearchbar) => {
@@ -26,19 +27,18 @@ class App extends React.Component {
       selectedVideo: clickedVideo,
     });
   };
+
   render() {
-    const { videos, selectedVideo } = this.state;
+    const { videos, selectedVideo, description } = this.state;
     return (
       <div className="container">
         <div className="app ">
           <div className="app__left">
-            {/* //searchbar */}
             <Searchbar onFormSubmit={this.handleSubmit} />
-            {/* //mainvideo */}
             <Main video={selectedVideo} videos={videos} />
           </div>
+
           <div className="app__right">
-            {/* aside-video results */}
             <Aside videos={videos} handleVideoSelect={this.handleVideoSelect} />
           </div>
         </div>

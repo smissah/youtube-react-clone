@@ -61,7 +61,13 @@ body {
 
 .main .main__underVideo {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.main .main__underVideo .main__underVideoTitleAndToolbar {
+  display: flex;
+  flex-direction: row;
 }
 
 .main iframe {

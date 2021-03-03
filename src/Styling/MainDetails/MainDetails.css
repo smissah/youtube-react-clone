@@ -65,6 +65,24 @@ body {
 }
 
 .main__details .main__detailsText .main__detailsChannel {
-  margin-right: 4rem;
+  position: relative;
+  padding-right: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  font-size: 1.8rem;
+  border-right: solid white 2px;
+}
+
+.main__details .main__detailsText .main__detailsChannel::before {
+  content: "";
+  background: rgba(240, 240, 240, 0.384);
+  width: 2.5rem;
+  height: 2.5rem;
+  left: -25%;
+  top: 5%;
+  border-radius: 25px;
+  display: block;
+  position: absolute;
+  z-index: -1;
 }
 /*# sourceMappingURL=MainDetails.css.map */

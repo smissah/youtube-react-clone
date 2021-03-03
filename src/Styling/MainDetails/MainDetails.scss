@@ -15,7 +15,24 @@
     align-items: center;
 
     .main__detailsChannel {
-      margin-right: 4rem;
+      position: relative;
+      padding-right: 2rem;
+      margin-left: $marginSmall;
+      margin-right: 2rem;
+      font-size: 1.8rem;
+      border-right: solid white 2px;
+      &::before {
+        content: "";
+        background: rgba(240, 240, 240, 0.384);
+        width: 2.5rem;
+        height: 2.5rem;
+        left: -25%;
+        top: 5%;
+        border-radius: $radNormal;
+        display: block;
+        position: absolute;
+        z-index: -1;
+      }
     }
 
     .main__detailsTitle {

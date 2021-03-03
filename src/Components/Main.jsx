@@ -1,9 +1,14 @@
-import React from "react";
-import { MainDetails, VideoToolbar } from "../Components";
+import React, { useState } from "react";
+import { MainDetails, VideoToolbar, MainDescription } from "../Components";
 import "../Styling/Main/Main.css";
 
 const Main = ({ video }) => {
   // console.log(video);
+  const [description, setDescription] = useState(false);
+
+  const handleToggleDescription = () => {
+    setDescription(!description);
+  };
 
   if (video) {
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
@@ -21,7 +26,15 @@ const Main = ({ video }) => {
           />
         )}
         <div className="main__underVideo">
-          <MainDetails video={video} /> {video && <VideoToolbar />}
+          <div className="main__underVideoTitleAndToolbar">
+            <MainDetails video={video} />{" "}
+            {video && (
+              <VideoToolbar handleToggleDescription={handleToggleDescription} />
+            )}
+          </div>
+          <div className="main__underVideoDescription">
+            {description && <MainDescription video={video} />}
+          </div>
         </div>
       </div>
     </React.Fragment>
